@@ -12,8 +12,8 @@ public:
                 nums[i] /= 10;
                 
             }
-            if( c%2==0){
-                co ++;
+            if( (c&1)==0){
+                co++;
             }
             }
         return co;
