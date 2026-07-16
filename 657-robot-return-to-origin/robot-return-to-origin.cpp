@@ -3,11 +3,11 @@ public:
     bool judgeCircle(string moves) {
         int x = 0, y = 0;
 
-        for(char move : moves) {
-            if(move == 'U') y++;
-            else if(move == 'D') y--;
-            else if(move == 'R') x++;
-            else if(move == 'L') x--;
+        for(int i = 0;i < moves.size();i++) {
+            if(moves[i] == 'U') y++;
+            else if(moves[i] == 'D') y--;
+            else if(moves[i] == 'R') x++;
+            else if(moves[i] == 'L') x--;
         }
 
         return (x == 0 && y == 0);
