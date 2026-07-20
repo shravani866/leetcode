@@ -1,12 +1,17 @@
 class Solution {
 public:
     bool checkIfPangram(string sentence) {
-        set<char> s;
-
-        for(char c : sentence){
-            s.insert(c);
+        int n = sentence.size();
+        int freq[26] ={0};
+        for(int i = 0; i < n; i++){
+            freq[sentence[i] - 'a']++;
         }
-
-        return s.size() == 26;
-    }
+        int ans = -1;
+        for(int i = 0; i < 26; i++){
+            if(freq[i]==0){
+                return false;
+            }
+        }
+        return true;
+   }
 };
